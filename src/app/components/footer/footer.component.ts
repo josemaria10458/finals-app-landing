@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   template: `
     <footer class="bg-gray-900 text-gray-300">
       <div class="section-container py-12">
@@ -28,9 +29,9 @@ import { CommonModule } from '@angular/common';
           <div>
             <h3 class="text-white font-semibold mb-4">Producto</h3>
             <ul class="space-y-2">
-              <li><a href="#features" class="hover:text-white transition-colors">Características</a></li>
-              <li><a href="#stats" class="hover:text-white transition-colors">Estadísticas</a></li>
-              <li><a href="#download" class="hover:text-white transition-colors">Descargar</a></li>
+              <li><a routerLink="/" fragment="features" class="hover:text-white transition-colors">Características</a></li>
+              <li><a routerLink="/" fragment="stats" class="hover:text-white transition-colors">Estadísticas</a></li>
+              <li><a routerLink="/" fragment="download" class="hover:text-white transition-colors">Descargar</a></li>
             </ul>
           </div>
 
@@ -46,7 +47,7 @@ import { CommonModule } from '@angular/common';
           <div>
             <h3 class="text-white font-semibold mb-4">Legal</h3>
             <ul class="space-y-2">
-              <li><a href="#" class="hover:text-white transition-colors">Privacidad</a></li>
+              <li><a routerLink="/privacidad" class="hover:text-white transition-colors">Privacidad</a></li>
               <li><a href="#" class="hover:text-white transition-colors">Términos</a></li>
               <li><a href="#" class="hover:text-white transition-colors">Cookies</a></li>
             </ul>
